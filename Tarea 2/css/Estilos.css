@@ -1,0 +1,40 @@
+.importante{
+    color:blue 
+}
+
+h1{
+    font-size: 400%;
+    color:brown
+}
+
+h3{
+    font-size: 500%;
+    color:cornflowerblue
+}
+.secundario{
+    color:red
+}
+
+#link{
+    color:yellow
+}
+
+.imagenes{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.imagenes2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.stilo{
+      color: purple;
+      background-color: #d8da3d 
+}
+
+.letras{
+    font-size: 100%;
+    color:crimson
+}
