@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=dge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="{%static 'js/bootstrap.min.js' %}"></script>
+    <title>Estudiantes</title>
+</head>
+<body>
+    <div class="page-header">
+      <h1>Listado de Estudiantes <small>este es un registro de los estudiantes</small></h1>
+    </div>
+    <h2>
+        <a href="{% url 'home' %}">Home</a>
+    </h2>
+    <table class="table table-striped">
+
+        <tr>     
+          <th scope="row">  ID  </th>     
+          <th>   Nombre   </th>      
+          <th>   Grado   </th>      
+          <th>   Sección   </th>
+          <th>   Foto   </th>       
+        </tr>
+      
+        <tr>     
+          <th>1</th>      
+          <td>Azarías</td>      
+          <td>6to</td>      
+          <td>A</td>
+          <th><img class="img-rounded" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/1200px-NewTux.svg.png" width="100px" height="100px"> </th>
+        </tr>
+
+        <tr>
+          <th>2</th>
+      
+          <td>Diego</td>
+          <td>5to</td>
+          <td>B</td>
+        </tr>
+
+        <tr>
+          <th>3</th>
+          <td>Carlos</td>
+          <td>4to</td>
+          <td>A</td>
+        </tr>
+      
+      </table>
+
+    <p></p>
+</body>
+</html>

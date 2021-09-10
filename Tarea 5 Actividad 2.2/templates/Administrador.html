@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=dge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="{%static 'js/bootstrap.min.js' %}"></script>
+    <title>Administradores</title>
+</head>
+<body>
+    <h1>Listado de Administradores</h1>
+    <h2>
+        <a href="{% url 'home' %}">Home</a>
+    </h2>
+    <table class="table table-striped">
+
+        <tr>     
+          <th scope="row"> ID </th>     
+          <th> Nombre </th>      
+          <th> Telefono </th>      
+          <th> Dirección </th>      
+        </tr>
+      
+        <tr>     
+          <th>1</th>      
+          <td>Javier</td>      
+          <td>53269874</td>      
+          <td>San Marcos</td>
+        </tr>
+
+        <tr>
+          <th>2</th>
+          <td>Christian</td>
+          <td>48963251</td>
+          <td>San Rafael</td>
+        </tr>
+
+        <tr>
+          <th>3</th>
+          <td>Erik</td>
+          <td>26597841</td>
+          <td>Rio Blanco</td>
+        </tr>
+      
+      </table>
+
+    <p></p>
+</body>
+</html>
