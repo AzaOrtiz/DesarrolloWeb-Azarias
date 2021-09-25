@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Agregar Estudiantes</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="{% url 'home' %}">Inicio</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="{% url 'home' %}">Inicio</a></li>
+								<li><a href="{% url 'estudiantes' %}">Listado Estudiantes</a></li>
+								<li><a href="{% url 'administradores' %}">Listado Administradores</a></li>
+								<li><a href="{% url 'crear_estudiantes' %}">Ingreso Estudiantes</a></li>
+								<li><a href="{% url 'crear_administradores' %}">Ingreso Administradores</a></li>
+							</ul>
+							<a href="#" class="close">Cerrar</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Ingreso de Estudiantes</h2>
+								<p>Para nuevos estudiantes, es necesario contar con los permisos necesarios para realizar dicha tarea.</p>
+								
+								<form method="POST">
+									{% csrf_token %}
+									Carnet {{ form.carnet }}
+									Nombre {{ form.nombre }}
+									Apellido {{ form.apellidos }}
+									Tipo {{ form.tipo }}
+									<input type="submit" name="Guardar">
+								</form>
+							</div>
+						</header>
+						<!-- Content -->
+						<div class="wrapper">
+							<div class="inner">
+
+								<h3 class="major">Estudiantes</h3>
+								<p>Se muestra el formulario de ingreso, dar clic en enviar para guardar los cambios. </p>
+								</section>
+
+							</div>
+						</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>

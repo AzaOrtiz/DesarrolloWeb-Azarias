@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Administradores</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="{% url 'home' %}">Inicio</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="{% url 'home' %}">Inicio</a></li>
+								<li><a href="{% url 'estudiantes' %}">Listado Estudiantes</a></li>
+								<li><a href="{% url 'administradores' %}">Listado Administradores</a></li>
+								<li><a href="{% url 'crear_estudiantes' %}">Ingreso Estudiantes</a></li>
+								<li><a href="{% url 'crear_administradores' %}">Ingreso Administradores</a></li>
+							</ul>
+							<a href="#" class="close">Cerrar</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Listado Administradores</h2>
+								<p>Cada uno de los que están aquí, son la representación de todo el equipo de trabajo.
+									Estos son:</p>
+									<h4>
+										<h1>Listar Administrador</h1>
+										<table border="1">
+											<tr>
+												<td>Nombre</td>
+											</tr>
+											{% for adm in object_list %}
+											<tr>
+												<td>{{ adm.nombre }}</td>
+											</tr>
+											{% endfor %}
+										</table>
+									</h4>
+							</div>
+						</header>
+						<!-- Content -->
+						<div class="wrapper">
+							<div class="inner">
+
+								<h3 class="major">Administrador</h3>
+								<p>Tenemos a la disposición de todos, la mejor administración, estos están muy bien capacitados, para poder ejecutar cualquier tarea, demostrando su capacidad y profesionalismo. </p>
+								</section>
+
+							</div>
+						</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>

@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Estudiantes</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="{% url 'home' %}">Inicio</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="{% url 'home' %}">Inicio</a></li>
+								<li><a href="{% url 'estudiantes' %}">Listado Estudiantes</a></li>
+								<li><a href="{% url 'administradores' %}">Listado Administradores</a></li>
+								<li><a href="{% url 'crear_estudiantes' %}">Ingreso Estudiantes</a></li>
+								<li><a href="{% url 'crear_administradores' %}">Ingreso Administradores</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Listado Estudiantes</h2>
+								<p>Estos son los alumnos que han puesto su confianza en la calidad que nosotros ofrecemos.</p>
+								<h4>
+									<h1>Listar Estudiantes</h1>
+									<table border="1">
+										<tr>
+											<td>Carnet</td>
+											<td>Nombre</td>
+											<td>Apellido</td>
+											<td>Tipo</td>
+										</tr>
+										{% for est in object_list %}
+										<tr>
+											<td>{{ est.carnet }}</td>
+											<td>{{ est.nombre }}</td>
+											<td>{{ est.apellidos }}</td>
+											<td>{{ est.tipo }}</td>
+										</tr>
+										{% endfor %}
+									</table>
+								</h4>
+							</div>
+						</header>
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">Estudiantes</h3>
+									<p>Cada uno de los alumnos inscritos, ha puesto su confianza en nuestra institución, así como también en cada uno de los docentes. Así poder obtener mayor conocimiento y llegar a cumplir cada una de sus metas, que les ayudaran a prosperar tanto en sus vidas materiales como espirituales. </p>
+									</section>
+
+								</div>
+							</div>
+
+					</section>
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>

@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Inicio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href= "{% static 'assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href= "{% static 'assets/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="{% url 'home' %}">Inicio</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="{% url 'home' %}">Inicio</a></li>
+								<li><a href="{% url 'estudiantes' %}">Listado Estudiantes</a></li>
+								<li><a href="{% url 'administradores' %}">Listado Administradores</a></li>
+								<li><a href="{% url 'crear_estudiantes' %}">Ingreso Estudiantes</a></li>
+								<li><a href="{% url 'crear_administradores' %}">Ingreso Administradores</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<div class="logo"><span class="icon fa-gem"></span></div>
+							<h2>BIENVENIDOS</h2>
+							<p>«Hola. Muchas gracias por tu interés en nosotros, somos un colegio con las capacidades que se requieren para una educación de calidad, desde nuestro sitio web. Te mantendremos informado sobre el día y acontecer de nosotros.» «Muchas gracias por confiar en nosotros>>. </p>
+						</div>
+					</section>
+				<!-- Wrapper -->
+					<section id="wrapper">
+
+						<!-- One -->
+							<section id="one" class="wrapper spotlight style1">
+								<div class="inner">
+									<a href="#" class="image"><img src="{%static 'images/pic01.jpg' %}" alt="" /></a>
+									<div class="content">
+										<h2 class="major">Busque en la barra de menu nuestras opciones</h2>
+										<p> Esperamos que su visita a nuestro sitio sea lo mas agradable posible, Podra ver cada uno de nuestros registros para contemplar a las personas que han puesto su confianza en nostros.
+										</p>
+									</div>
+								</div>
+							</section>
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>
